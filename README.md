@@ -2,4 +2,4 @@
 
 Simple widget, that'll help you decide what's right
 
-Demo: http://decision-making-system.jakubemfoto.pl
+Demo: [Decision-making-system](http://decision-making-system.jakubemfoto.pl).
