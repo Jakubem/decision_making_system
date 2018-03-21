@@ -2,105 +2,113 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="theme-color" content="#000">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Simple widget, that'll help you decide what's right" />
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <link rel="icon" href="favicon.png" type="image/x-icon" />
-  <link rel="manifest" href="manifest.json">
-  <title>Decision making system</title>
-  <style>
-    body {
-    background: #000;
-    margin: 0;
-    padding: 0;
-}
-.tittle {
-    color: #fafafa;
-    font-family: 'montserrat';
-    font-size: 50px;
-    margin: 50px;
-    text-align: center;
-}
-.form {
-    width: 600px;
-    background: linear-gradient(#86c1d0, #9b30cb);
-    border-radius: 5px;
-    display: flex;
-    margin: 0 auto;
-}
-.button-check {
-    background: linear-gradient(#666666, #444444);
-    box-shadow: 3px 8px 25px rgba(0, 0, 0, 0.3), inset 0 0 3em #444444;
-    text-shadow: 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black, 3.5px 3.5px black, 2.5px 2.5px black, 1.5px 1.5px black, .5px .5px black;
-    border: 10px solid;
-    border-color: #fafafa #888888 #333333 #aaaaaa;
-    margin: 15px;
-    border-radius: 5px;
-}
-.button-check:active {
-    background: #663399;
-}
-.button-check::after {
-    content: 'click';
-    font-size: 140px;
-    font-family: 'montserrat';
-    color: aliceblue;
-    display: block;
-    text-align: center;
-    opacity: 0.7;
-    margin-right: 10px;
-}
-.result {
-    font-size: 100px;
-    padding: 0;
-    margin: 10px;
-    font-family: 'montserrat', 'helvetica';
-    color: #fafafa;
-    text-shadow: 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black, 3.5px 3.5px black, 2.5px 2.5px black, 1.5px 1.5px black, .5px .5px black;
-}
-@media screen and (max-width: 700px) {
-    .result {
-        font-size: 60px;
-    }
-    .button-check::after {
-        font-size: 90px;
-        
-    }
-    .form {
-        width: 400px;
-    }
-    .tittle {
-        font-size: 30px;
-    }
-}
-@media screen and (max-width: 500px) {
-    .result {
-        font-size: 40px;
-    }
-    .button-check::after {
-        font-size: 50px;   
-    }
-    .form {
-        width: 300px;
-    }
-}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="theme-color" content="#000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Simple widget, that'll help you decide what's right" />
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+    <link rel="manifest" href="manifest.json">
+    <title>Decision making system</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat');
+        body {
+            background: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .tittle {
+            color: #fafafa;
+            font-family: 'montserrat';
+            font-size: 50px;
+            margin: 50px;
+            text-align: center;
+        }
+
+        .form {
+            width: 600px;
+            background: linear-gradient(#86c1d0, #9b30cb);
+            border-radius: 5px;
+            display: flex;
+            margin: 0 auto;
+        }
+
+        .button-check {
+            background: linear-gradient(#666666, #444444);
+            box-shadow: 3px 8px 25px rgba(0, 0, 0, 0.3), inset 0 0 3em #444444;
+            text-shadow: 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black, 3.5px 3.5px black, 2.5px 2.5px black, 1.5px 1.5px black, .5px .5px black;
+            border: 10px solid;
+            border-color: #fafafa #888888 #333333 #aaaaaa;
+            margin: 15px;
+            border-radius: 5px;
+        }
+
+        .button-check:active {
+            background: #663399;
+        }
+
+        .button-check::after {
+            content: 'click';
+            font-size: 140px;
+            font-family: 'montserrat';
+            color: aliceblue;
+            display: block;
+            text-align: center;
+            opacity: 0.7;
+            margin-right: 10px;
+        }
+
+        .result {
+            font-size: 100px;
+            padding: 0;
+            margin: 10px;
+            font-family: 'montserrat', 'helvetica';
+            color: #fafafa;
+            text-shadow: 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black, 3.5px 3.5px black, 2.5px 2.5px black, 1.5px 1.5px black, .5px .5px black;
+        }
+
+        @media screen and (max-width: 700px) {
+            .result {
+                font-size: 60px;
+            }
+            .button-check::after {
+                font-size: 90px;
+
+            }
+            .form {
+                width: 400px;
+            }
+            .tittle {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .result {
+                font-size: 40px;
+            }
+            .button-check::after {
+                font-size: 50px;
+            }
+            .form {
+                width: 300px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <heder>
-    <h1 class='tittle'>
-      Cant decide?
-    </h1>
-  </heder>
-  <div class='form'>
-    <button class="button-check" aria-label="click to check result"></button>
-    <h2 class="result">
-    </h2>
-  </div>
-  <script src="index.js"></script>
+    <heder>
+        <h1 class='tittle'>
+            Cant decide?
+        </h1>
+    </heder>
+    <div class='form'>
+        <button class="button-check" aria-label="click to check result"></button>
+        <h2 class="result">
+        </h2>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
