@@ -1,10 +1,10 @@
-var btn = document.querySelector('.button');
-var res = document.querySelector('.result')
+const btn = document.querySelector('.button');
+const res = document.querySelector('.result')
 
 btn.addEventListener('click', function () {
     setTimeout(function () {
-        var options = ['yes', 'no'];
-        var choice = Math.floor(Math.random() * 2);
+        let options = ['yes', 'no'];
+        let choice = Math.floor(Math.random() * 2);
         res.textContent = options[choice];
     }, 300);
 
