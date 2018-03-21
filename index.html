@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="theme-color" content="#000">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Simple widget, that'll help you decide what's right" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
   <link rel="icon" href="favicon.png" type="image/x-icon" />
   <link rel="manifest" href="manifest.json">
@@ -29,7 +30,7 @@
     display: flex;
     margin: 0 auto;
 }
-.button {
+.button-check {
     background: linear-gradient(#666666, #444444);
     box-shadow: 3px 8px 25px rgba(0, 0, 0, 0.3), inset 0 0 3em #444444;
     text-shadow: 4px 4px black, 3px 3px black, 2px 2px black, 1px 1px black, 3.5px 3.5px black, 2.5px 2.5px black, 1.5px 1.5px black, .5px .5px black;
@@ -38,10 +39,10 @@
     margin: 15px;
     border-radius: 5px;
 }
-.button:active {
+.button-check:active {
     background: #663399;
 }
-.button::after {
+.button-check::after {
     content: 'click';
     font-size: 140px;
     font-family: 'montserrat';
@@ -95,7 +96,7 @@
     </h1>
   </heder>
   <div class='form'>
-    <button class="button"></button>
+    <button class="button-check" aria-label="click to check result"></button>
     <h2 class="result">
     </h2>
   </div>

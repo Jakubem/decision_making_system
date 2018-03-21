@@ -1,4 +1,4 @@
-const btn = document.querySelector('.button');
+const btn = document.querySelector('.button-check');
 const res = document.querySelector('.result')
 
 btn.addEventListener('click', function () {
@@ -13,3 +13,15 @@ btn.addEventListener('click', function () {
     }, 1700);
 
 });
+
+if ('serviceWorker' in navigator) {
+    // Register a service worker hosted at the root of the
+    // site using the default scope.
+    navigator.serviceWorker.register('./sw.js').then(function(registration) {
+      console.log('Service worker registration succeeded:', registration);
+    }).catch(function(error) {
+      console.log('Service worker registration failed:', error);
+    });
+  } else {
+    console.log('Service workers are not supported.');
+  }
